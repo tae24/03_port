@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.flow{
+  &__wrapper{
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6.6rem;
+    @include mq(md){
+      margin-top: 32rem;
+    }
+  }
+  &__title{
+    padding-left: 2rem;
+    @include mq(md){
+      padding-left: 14.8rem;
+    }
+    @include title
+  }
+  &__area{
+    padding-left: 2rem;
+    margin: 1.7rem 0 5.3rem 0;
+    @include mq(md){
+      padding-left: 14.8rem;
+      margin: 5rem 0 12.9rem 0;
+    }
+  }
+  &__unit{
+    margin-right: 1.1rem;
+    @include mq(md){
+      margin-right: 2.2rem;
+    }
+  }
+  &__img{
+    @include mq(md){
+      max-width: 36rem;
+      width: 100%;
+    }
+  }
+  &__item{
+    font-size: 0.8rem;
+    margin-top: 0.7rem;
+    @include mq(md){
+      font-size: 2.2rem;
+      margin-top: 2.1rem;
+    }
+  }
+  &__textArea{
+    padding-left: 2rem;
+    @include mq(md){
+      padding-left: 14.8rem;
+    }
+  }
+  &__lead{
+    font-size: 2.3rem;
+    line-height: 1.739;
+    letter-spacing: 0.115rem;
+    @include mq(md){
+      font-size: 6rem;
+      line-height: 1.333;
+      letter-spacing: 0.3rem;
+    }
+  }
+  &__text{
+    margin-top: 3.7rem;
+    line-height: 1.6;
+    width: 93%;
+    @include mq(md){
+      font-size: 1.8rem;
+      margin-top: 6.9rem;
+      line-height: 2.1;
+      width: 97%;
+    }
+  }
+}

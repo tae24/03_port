@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+@mixin required {
+  &::after {
+    content: '必須';
+    border: solid 1px $font_colorSecondary;
+    padding: 0.1rem 0.2rem;
+    margin-left: 1.1rem;
+    @include mq(md){
+      margin-left: 5.8rem;
+    }
+  }
+}
+
+// @include required
+
+
+// hr {
+//   height: 0;
+//   margin: 0;
+//   padding: 0;
+//   border: 0;
+// }
+
+
+hr {
+  border-top: 1px solid $colorTertiary;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 6.4rem;
+  @include mq(md){
+    display: none;
+  }
+}

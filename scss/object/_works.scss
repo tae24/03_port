@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+.works{
+  &__wrapper{
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6.6rem;
+    @include mq(md){
+      margin-top: 16.5rem;
+    }
+  }
+  &__title{
+    padding-left: 2rem;
+    @include mq(sm){
+      padding-left: 1rem;
+    }
+    @include mq(md){
+      padding-left: 14.8rem;
+    }
+    @include title
+  }
+  &__lead{
+    margin: 1.6rem 0 1.5rem 0;
+    padding-left: 2rem;
+    line-height: 2.4;
+    @include mq(sm){
+      padding-left: 1rem;
+    }
+    @include mq(md){
+      // font-size: 6rem;
+      // margin-top: 5.5rem;
+      padding-left: 14.8rem;
+    }
+  }
+  &__area{
+    padding-left: 2rem;
+    @include mq(sm){
+      padding-left: 1rem;
+    }
+    @include mq(md){
+      padding-left: 14.8rem;
+    }
+  }
+  &__unit{
+    width: 100%;
+    margin: 0 auto;
+    @include mq(md){
+      display: flex;
+      margin-bottom: 9.7rem;
+    }
+  }
+  // 上の文字疑似要素の場合
+  // &__imgBox{
+  //   position: relative;
+  //   display: inline-block;
+  //   margin-bottom: 2.1rem;
+  //   @include mq(md){
+  //     margin-right: 8.4rem;
+  //   }
+  // }
+  // &__img{
+  //   @include mq(sm){
+  //     width: 30rem;
+  //   }
+  //   @include mq(md){
+  //     width: 100%;
+  //     height: 25.4rem;
+  //     object-fit: contain;
+  //   }
+  // }
+
+  //cssでimgの場合
+  &__imgBox{
+    width: 33.5rem;
+    // padding: 7.65rem 0;
+    height: 22rem;
+    /*背景画像の高さを確保*/
+    position: relative;
+    /*中の要素の基準値*/
+    @include mq(sm){
+      width: 30rem;
+    }
+    @include mq(md){
+      margin-right: 8.4rem;
+      width: 38.8rem;
+      // padding: 10rem 0;
+      height: 25.4rem;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5); 
+      /*半透明のフィルターをかける*/
+    }
+  }
+
+  &__inner{
+    text-align: center;
+    top: 33%;
+    position: relative;
+    width: 100%;
+  }
+
+  &__overlap{
+    font-size: 6.9rem;
+    color: $font_colorPrimary;
+    // top: 50%;
+  }
+  //cssでimgの場合ここまで
+
+  &__descriptionBox{
+    margin-top: 2.1rem;
+    @include mq(md){
+      margin-top: 0;
+    }
+  }
+  &__heading{
+    width: 94%;
+    @include mq(md){
+      max-width: 64rem;
+    }
+  }
+  &__text{
+    width: 93%;
+    @include mq(md){
+      max-width: 64rem;
+    }
+  }
+}
+
+//cssでimgの場合
+
+.works{
+  &__pseudoElementOne{
+    background: url(..//images/works_12_sp.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq(md){
+      background: url(..//images/works_12_pc.jpg) center center no-repeat;
+    }
+  }
+  &__pseudoElementTwo{
+    background: url(..//images/works_7_sp.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq(md){
+      background: url(..//images/works_7_pc.jpg) center center no-repeat;
+    }
+  }
+  &__pseudoElementTree{
+    background: url(..//images/works_86_sp.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq(md){
+      background: url(..//images/works_86_pc.jpg) center center no-repeat;
+    }
+  }
+  &__pseudoElementFour{
+    background: url(..//images/works_1_sp.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq(md){
+      background: url(..//images/works_1_pc.jpg) center center no-repeat;
+    }
+  }
+  &__pseudoElementFive{
+    background: url(..//images/works_15_sp.jpg) center center no-repeat;
+    background-size: cover;
+    @include mq(md){
+      background: url(..//images/works_15_pc.jpg) center center no-repeat;
+    }
+  }
+}
+
+
+// イメージの上の疑似要素
+
+// .works{
+//   &__pseudoElementOne{
+//     &::before{
+//       content: "+12%";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+//   &__pseudoElementTwo{
+//     &::before{
+//       content: "7位";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+//   &__pseudoElementTree{
+//     &::before{
+//       content: "86%";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+//   &__pseudoElementFour{
+//     &::before{
+//       content: "1P";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+//   &__pseudoElementFive{
+//     &::before{
+//       content: "+15%";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+// }
+
+
+// @mixinの時
+
+// .works{
+//   &__imgBox{
+//     position: relative;
+//     display: inline-block;
+//     &::before{
+//       content: "+12%";
+//       font-size: 6.9rem;
+//       color: $font_colorPrimary;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+// }
+
+// .works{
+//   &__title{
+//     @include title
+//   }
+// }
+
+// @mixin overlap($number){
+//   &::before{
+//   content: ("$number");
+//   font-size: 6.9rem;
+//   color: $font_colorPrimary;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   }
+// }
+
+// @include overlap()
+

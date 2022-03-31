@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@mixin title {
+  font-size: 1.6rem;
+  color: $font_colorPrimary;
+  @include mq(md){
+    font-size: 3.2rem;
+  }
+}
+
+
+// @include title

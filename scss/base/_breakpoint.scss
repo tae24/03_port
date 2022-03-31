@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 320,
+  md: 768,
+  lg: 1440,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  mi: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  li: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+);
+
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// @include mq(md){
+
+// }

@@ -1,0 +1,60 @@
+@charset "utf-8"; 
+
+
+
+body{
+  font-family:"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: $font_colorBody;
+  background-color: $bg_colorMain;
+}
+
+h1,h2{
+  font-family: operetta-12, serif;
+  text-transform: uppercase;
+}
+
+.font__op{
+  font-family: operetta-12, serif;
+}
+
+.font__ak{
+  font-family: aktiv-grotesk-extended, sans-serif;
+}
+
+.font__no{
+  font-family: noto-sans-cjk-jp, sans-serif;
+}
+
+.font__yu{
+  font-family: yu-gothic-pr6n, sans-serif;
+}
+
+.font__dn{
+  font-family: dnp-shuei-gothic-kin-std, sans-serif;
+}
+
+/* 小文字を大文字に変換 */
+.font__up{
+  text-transform: uppercase;
+}
+/* 頭文字だけ大文字に変換 */
+.font__cap{
+  text-transform: capitalize;
+}
+
+.font__bold{
+  font-weight: bold;
+}
+
+.font__lighter{
+  font-weight: lighter;
+}
+
+// タイトル
+// font-family: operetta-12, serif;
+// その下
+// font-family: aktiv-grotesk-extended, sans-serif;
+
+// font-family: noto-sans-cjk-jp, sans-serif;
+// font-family: yu-gothic-pr6n, sans-serif;
+// font-family: dnp-shuei-gothic-kin-std, sans-serif;
